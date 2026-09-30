@@ -1,0 +1,42 @@
+# Default System & Database Configurations
+project:
+  name: "dynamic-factor-risk-engine"
+  version: "0.1.0"
+  description: "Dynamic Multi-Factor Portfolio & Tail-Risk Research Engine"
+
+database:
+  dialect: "sqlite" # sqlite or postgresql
+  sqlite_path: "data/processed/dynamic_factor_risk.db"
+  postgres:
+    host: "localhost"
+    port: 5432
+    dbname: "factor_risk_db"
+    user: "postgres"
+    password: ""
+
+paths:
+  raw_data: "data/raw"
+  processed_data: "data/processed"
+  metadata: "data/metadata"
+  figures: "reports/figures"
+  reports: "reports"
+
+data_sources:
+  french:
+    base_url: "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp"
+    ff5_daily: "F-F_Research_Data_5_Factors_2x3_daily_CSV.zip"
+    ff5_monthly: "F-F_Research_Data_5_Factors_2x3_CSV.zip"
+    mom_daily: "F-F_Momentum_Factor_daily_CSV.zip"
+    mom_monthly: "F-F_Momentum_Factor_CSV.zip"
+    portfolios_10_industry_daily: "10_Industry_Portfolios_daily_CSV.zip"
+  fred:
+    api_key: "" # Optional FRED API key, fallback to direct CSV download
+    series:
+      vix: "VIXCLS"
+      yield_10y: "DGS10"
+      yield_2y: "DGS2"
+      yield_3m: "DGS3MO"
+      cpi: "CPIAUCSL"
+      unemployment: "UNRATE"
+      fed_funds: "FEDFUNDS"
+      high_yield_spread: "BAMLH0A0HYM2"

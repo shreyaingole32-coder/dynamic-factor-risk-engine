@@ -1,0 +1,3 @@
+{
+  "tests/test_returns.py::test_french_data_loader_parsing": true
+}

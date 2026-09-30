@@ -1,0 +1,30 @@
+# Research Hypotheses & Model Parameters Configuration
+research:
+  in_sample_start: "1970-01-01"
+  in_sample_end: "2005-12-31"
+  validation_start: "2006-01-01"
+  validation_end: "2015-12-31"
+  out_of_sample_start: "2016-01-01"
+  out_of_sample_end: "2025-12-31"
+
+portfolio:
+  max_weight: 0.30
+  min_weight: 0.00
+  sum_weights: 1.0
+  rebalance_frequency: "monthly" # daily, weekly, monthly, quarterly
+  estimation_window: 252 # trading days for covariance/risk estimation
+
+risk:
+  es_confidence: 0.975 # Expected Shortfall alpha (e.g. 97.5% or 95%)
+  var_confidence: 0.95
+  covariance_method: "sample" # sample, rolling, shrinkage
+  annualization_factor: 252
+
+regime:
+  volatility_window: 252
+  vix_threshold_percentile: 70
+  yield_spread_threshold: 0.0 # 10Y-2Y yield curve inversion threshold
+
+backtest:
+  transaction_cost_bps: 10.0 # 10 basis points per unit turnover (0.0010)
+  sensitivity_cost_bps: [0.0, 10.0, 25.0, 50.0]

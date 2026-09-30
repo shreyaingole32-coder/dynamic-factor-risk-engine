@@ -1,0 +1,14 @@
+[
+  "tests/test_backtest.py::test_transaction_cost_calculation",
+  "tests/test_backtest.py::test_turnover_calculation",
+  "tests/test_no_lookahead.py::test_no_future_data_leakage",
+  "tests/test_portfolio.py::test_portfolio_constraints_satisfied",
+  "tests/test_returns.py::test_french_data_loader_parsing",
+  "tests/test_returns.py::test_french_data_loader_parsing_offline",
+  "tests/test_returns.py::test_validator_clean_decimals",
+  "tests/test_returns.py::test_validator_detects_percentages",
+  "tests/test_risk.py::test_covariance_matrix_properties",
+  "tests/test_risk.py::test_drawdown_exact_sequence",
+  "tests/test_risk.py::test_expected_shortfall_tail_mean",
+  "tests/test_risk.py::test_historical_var_exact_quantile"
+]
